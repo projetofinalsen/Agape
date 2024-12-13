@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(52, 52, 133);
+    padding: 1%;
+}
+
+header img {
+    width: 4%;
+    height: auto;
+}
+
+header #menucheck {
+    width: 6%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+header #hamburguer {
+    width: 8%;
+    height: auto;
+    margin-left: -7%;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu li {
+    margin-right: 2%;
+    list-style-type: none;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media only screen and (min-width: 769px){
+
+    #menucheck, #hamburguer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    header {
+        padding: 2% 5% 2% 5%;
+        justify-content: space-between;
+    }
+
+    header img {
+        width: 8%;
+        height: auto;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header #hamburguer img {
+        width: 100%;
+        height: auto;
+    }
+
+    #menu {
+        display: none;
+        position: absolute;
+        background-color: rgb(52, 52, 133);
+        top: 55px;
+        left: 0px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    #menucheck:checked + #hamburguer + #menu {
+        display: block;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu li {
+        margin: 10px 0;
+    }
+}
+
+#home {
+    background-image: url(home.gif);
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+}
+
+#sobre {
+    background-image: url(hospital3.png);
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#sobremain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+
+#textbox {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.295);
+    align-items: center;
+    padding: 100px;
+}
+
+#servico {
+    background-image: url(hospital4.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#sobre h1, #servico h1, #medicos h1, #feedback h1, #medico h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid brown;
+}
+
+#servicocol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.servicebox {
+    background-color: white;
+    padding: 15px 30px 15px;
+    text-align: center;
+    border-bottom: 5px solid red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servicebox h3 {
+    margin: 10px 0px 5px;
+}
+
+.imagebox {
+    width: 13%;
+    height: auto;
+}
+
+
+#medicos {
+    background-image: url(hospital4.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+#medicos label {
+    font-weight: bolder;
+    font-size: large;
+}
+
+#medicos select {
+    height: 30%;
+    width: auto;
+}
+
+#medicosform {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin: 0 0 5% -60%;
+}
+
+#medicosform form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#medicosform label, #medicosform select, #medicosform button {
+    margin-bottom: 10px;
+}
+
+#medicos table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+#medicos td, th {
+    border: 5px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#medicos tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+#feedback {
+    background-image: url(hospital4.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#feedbackmain {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#feedbackmain div {
+    background-color: white;
+    padding: 15px 30px 15px;
+    text-align: center;
+    border-radius: 10px;
+    height: 90%;
+}
+
+#medico {
+    background-image: url(hospital4.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#medicomaino {
+    display: flex;
+    justify-content: space-around;
+}
+
+#medicomain {
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid brown;
+    width: 25%;
+    height: auto;
+}
+
+#medicomain h5 {
+    margin-top: 20px;
+}
+
+#medicomain a {
+    text-decoration: none;
+    background-color: brown;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+#medicomain h2 {
+    text-align: center;
+    margin: 3px;
+}
+
